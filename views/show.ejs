@@ -1,0 +1,12 @@
+<%include partials/header%>
+<div>
+    <h1><%=blog.title%></h1>
+    <img src="<%=blog.image%>" alt="image">
+    <p><%=blog.created.toDateString()%></p>
+    <p><%-blog.body%></p>
+</div>
+<a href="/blogs/<%=blog._id%>/edit" class ="btn btn-primary">Edit</a>
+<formaction="/blogs/<%=blog._id%>?_method=DELETE" method="POST">
+<button class="btn btn-danger" >Delete</button>
+</form>
+<%include partials/footer%>

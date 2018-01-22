@@ -1,0 +1,14 @@
+<%include partials/header%>
+
+<div class="page-header text-center">
+  <h1>Edit <%=blog.title%></h1>
+</div>
+
+<form action="/blogs/<%=blog._id%>?_method=PUT" method="POST">
+    <label>Title</label><input type="text" value="<%=blog.title%>" name="blog[title]" >
+    <label>Image</label><input type="text" value="<%=blog.image%>" name="blog[image]" >
+    <label >Blog Content</label><textarea name="blog[body]" ><%=blog.body%></textarea>
+    <input class="btn btn-primary" type="submit">
+</form>
+
+<%include partials/footer%>
